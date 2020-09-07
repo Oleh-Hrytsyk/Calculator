@@ -26,7 +26,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *verticalLayoutWidget;
+    QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QGridLayout *gridLayout;
@@ -68,15 +68,17 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         sizePolicy.setHeightForWidth(centralwidget->sizePolicy().hasHeightForWidth());
         centralwidget->setSizePolicy(sizePolicy);
-        verticalLayoutWidget = new QWidget(centralwidget);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(4, 10, 691, 731));
-        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
+        centralwidget->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"	background:black;\n"
+"}"));
+        gridLayout_2 = new QGridLayout(centralwidget);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         verticalLayout_2->setContentsMargins(10, 10, 10, 10);
-        label = new QLabel(verticalLayoutWidget);
+        label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Maximum);
         sizePolicy1.setHorizontalStretch(0);
@@ -87,15 +89,21 @@ public:
         QFont font;
         font.setPointSize(24);
         label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	color:white;\n"
+"}\n"
+""));
         label->setFrameShape(QFrame::NoFrame);
+        label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label->setMargin(20);
 
         verticalLayout_2->addWidget(label);
 
         gridLayout = new QGridLayout();
+        gridLayout->setSpacing(0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        gridLayout->setVerticalSpacing(7);
-        pushButton_16 = new QPushButton(verticalLayoutWidget);
+        pushButton_16 = new QPushButton(centralwidget);
         pushButton_16->setObjectName(QString::fromUtf8("pushButton_16"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
@@ -103,163 +111,332 @@ public:
         sizePolicy2.setHeightForWidth(pushButton_16->sizePolicy().hasHeightForWidth());
         pushButton_16->setSizePolicy(sizePolicy2);
         pushButton_16->setFont(font);
+        pushButton_16->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #444;\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: #888;\n"
+"}"));
 
         gridLayout->addWidget(pushButton_16, 4, 0, 1, 1);
 
-        pushButton_11 = new QPushButton(verticalLayoutWidget);
+        pushButton_11 = new QPushButton(centralwidget);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         sizePolicy.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
         pushButton_11->setSizePolicy(sizePolicy);
         pushButton_11->setFont(font);
+        pushButton_11->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background:rgb(55, 122, 255);\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: rgb(44, 100, 204);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_11, 0, 3, 1, 1);
 
-        pushButton_20 = new QPushButton(verticalLayoutWidget);
+        pushButton_20 = new QPushButton(centralwidget);
         pushButton_20->setObjectName(QString::fromUtf8("pushButton_20"));
         sizePolicy.setHeightForWidth(pushButton_20->sizePolicy().hasHeightForWidth());
         pushButton_20->setSizePolicy(sizePolicy);
         pushButton_20->setFont(font);
+        pushButton_20->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background:rgb(55, 122, 255);\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: rgb(44, 100, 204);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_20, 1, 3, 1, 1);
 
-        btn7 = new QPushButton(verticalLayoutWidget);
+        btn7 = new QPushButton(centralwidget);
         btn7->setObjectName(QString::fromUtf8("btn7"));
         sizePolicy.setHeightForWidth(btn7->sizePolicy().hasHeightForWidth());
         btn7->setSizePolicy(sizePolicy);
         btn7->setFont(font);
+        btn7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn7, 1, 0, 1, 1);
 
-        pushButton_22 = new QPushButton(verticalLayoutWidget);
+        pushButton_22 = new QPushButton(centralwidget);
         pushButton_22->setObjectName(QString::fromUtf8("pushButton_22"));
         sizePolicy.setHeightForWidth(pushButton_22->sizePolicy().hasHeightForWidth());
         pushButton_22->setSizePolicy(sizePolicy);
         pushButton_22->setFont(font);
+        pushButton_22->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background:rgb(55, 122, 255);\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: rgb(44, 100, 204);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_22, 3, 3, 1, 1);
 
-        btn6 = new QPushButton(verticalLayoutWidget);
+        btn6 = new QPushButton(centralwidget);
         btn6->setObjectName(QString::fromUtf8("btn6"));
         sizePolicy.setHeightForWidth(btn6->sizePolicy().hasHeightForWidth());
         btn6->setSizePolicy(sizePolicy);
         btn6->setFont(font);
+        btn6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn6, 2, 2, 1, 1);
 
-        btn0 = new QPushButton(verticalLayoutWidget);
+        btn0 = new QPushButton(centralwidget);
         btn0->setObjectName(QString::fromUtf8("btn0"));
         sizePolicy.setHeightForWidth(btn0->sizePolicy().hasHeightForWidth());
         btn0->setSizePolicy(sizePolicy);
         btn0->setFont(font);
+        btn0->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn0, 4, 1, 1, 1);
 
-        pushButton_23 = new QPushButton(verticalLayoutWidget);
+        pushButton_23 = new QPushButton(centralwidget);
         pushButton_23->setObjectName(QString::fromUtf8("pushButton_23"));
         sizePolicy.setHeightForWidth(pushButton_23->sizePolicy().hasHeightForWidth());
         pushButton_23->setSizePolicy(sizePolicy);
         pushButton_23->setFont(font);
+        pushButton_23->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background:rgb(55, 122, 255);\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: rgb(44, 100, 204);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_23, 4, 3, 1, 1);
 
-        btn2 = new QPushButton(verticalLayoutWidget);
+        btn2 = new QPushButton(centralwidget);
         btn2->setObjectName(QString::fromUtf8("btn2"));
         sizePolicy.setHeightForWidth(btn2->sizePolicy().hasHeightForWidth());
         btn2->setSizePolicy(sizePolicy);
         btn2->setFont(font);
+        btn2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn2, 3, 1, 1, 1);
 
-        btn9 = new QPushButton(verticalLayoutWidget);
+        btn9 = new QPushButton(centralwidget);
         btn9->setObjectName(QString::fromUtf8("btn9"));
         sizePolicy.setHeightForWidth(btn9->sizePolicy().hasHeightForWidth());
         btn9->setSizePolicy(sizePolicy);
         btn9->setFont(font);
+        btn9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn9, 1, 2, 1, 1);
 
-        btn8 = new QPushButton(verticalLayoutWidget);
+        btn8 = new QPushButton(centralwidget);
         btn8->setObjectName(QString::fromUtf8("btn8"));
         sizePolicy.setHeightForWidth(btn8->sizePolicy().hasHeightForWidth());
         btn8->setSizePolicy(sizePolicy);
         btn8->setFont(font);
+        btn8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn8, 1, 1, 1, 1);
 
-        pushButton_21 = new QPushButton(verticalLayoutWidget);
+        pushButton_21 = new QPushButton(centralwidget);
         pushButton_21->setObjectName(QString::fromUtf8("pushButton_21"));
         sizePolicy.setHeightForWidth(pushButton_21->sizePolicy().hasHeightForWidth());
         pushButton_21->setSizePolicy(sizePolicy);
         pushButton_21->setFont(font);
+        pushButton_21->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background:rgb(55, 122, 255);\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: rgb(44, 100, 204);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_21, 2, 3, 1, 1);
 
-        btn1 = new QPushButton(verticalLayoutWidget);
+        btn1 = new QPushButton(centralwidget);
         btn1->setObjectName(QString::fromUtf8("btn1"));
         sizePolicy2.setHeightForWidth(btn1->sizePolicy().hasHeightForWidth());
         btn1->setSizePolicy(sizePolicy2);
         btn1->setFont(font);
+        btn1->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn1, 3, 0, 1, 1);
 
-        pushButton_8 = new QPushButton(verticalLayoutWidget);
+        pushButton_8 = new QPushButton(centralwidget);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
         sizePolicy.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
         pushButton_8->setSizePolicy(sizePolicy);
         pushButton_8->setFont(font);
+        pushButton_8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: rgb(63, 93, 154);\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: rgb(86, 128, 212);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_8, 0, 0, 1, 1);
 
-        pushButton_10 = new QPushButton(verticalLayoutWidget);
+        pushButton_10 = new QPushButton(centralwidget);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         sizePolicy.setHeightForWidth(pushButton_10->sizePolicy().hasHeightForWidth());
         pushButton_10->setSizePolicy(sizePolicy);
         pushButton_10->setFont(font);
+        pushButton_10->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: rgb(63, 93, 154);\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: rgb(86, 128, 212);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_10, 0, 2, 1, 1);
 
-        btn5 = new QPushButton(verticalLayoutWidget);
+        btn5 = new QPushButton(centralwidget);
         btn5->setObjectName(QString::fromUtf8("btn5"));
         sizePolicy.setHeightForWidth(btn5->sizePolicy().hasHeightForWidth());
         btn5->setSizePolicy(sizePolicy);
         btn5->setFont(font);
+        btn5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn5, 2, 1, 1, 1);
 
-        pushButton_9 = new QPushButton(verticalLayoutWidget);
+        pushButton_9 = new QPushButton(centralwidget);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
         sizePolicy.setHeightForWidth(pushButton_9->sizePolicy().hasHeightForWidth());
         pushButton_9->setSizePolicy(sizePolicy);
         pushButton_9->setFont(font);
+        pushButton_9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: rgb(63, 93, 154);\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: rgb(86, 128, 212);\n"
+"}"));
 
         gridLayout->addWidget(pushButton_9, 0, 1, 1, 1);
 
-        btn4 = new QPushButton(verticalLayoutWidget);
+        btn4 = new QPushButton(centralwidget);
         btn4->setObjectName(QString::fromUtf8("btn4"));
         sizePolicy2.setHeightForWidth(btn4->sizePolicy().hasHeightForWidth());
         btn4->setSizePolicy(sizePolicy2);
         btn4->setFont(font);
+        btn4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn4, 2, 0, 1, 1);
 
-        pushButton_19 = new QPushButton(verticalLayoutWidget);
+        pushButton_19 = new QPushButton(centralwidget);
         pushButton_19->setObjectName(QString::fromUtf8("pushButton_19"));
         sizePolicy.setHeightForWidth(pushButton_19->sizePolicy().hasHeightForWidth());
         pushButton_19->setSizePolicy(sizePolicy);
         pushButton_19->setFont(font);
+        pushButton_19->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #444;\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: #888;\n"
+"}"));
 
         gridLayout->addWidget(pushButton_19, 4, 2, 1, 1);
 
-        btn3 = new QPushButton(verticalLayoutWidget);
+        btn3 = new QPushButton(centralwidget);
         btn3->setObjectName(QString::fromUtf8("btn3"));
         sizePolicy.setHeightForWidth(btn3->sizePolicy().hasHeightForWidth());
         btn3->setSizePolicy(sizePolicy);
         btn3->setFont(font);
+        btn3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: white;\n"
+"	border: 1px;\n"
+"	background: #222;\n"
+"}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background: #666;\n"
+"}"));
 
         gridLayout->addWidget(btn3, 3, 2, 1, 1);
 
 
         verticalLayout_2->addLayout(gridLayout);
+
+
+        gridLayout_2->addLayout(verticalLayout_2, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
