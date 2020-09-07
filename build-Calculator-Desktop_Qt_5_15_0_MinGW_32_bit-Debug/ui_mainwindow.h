@@ -119,6 +119,7 @@ public:
 "\n"
 "QPushButton::pressed{\n"
 "	background: #888;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_16, 4, 0, 1, 1);
@@ -135,6 +136,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: rgb(44, 100, 204);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_11, 0, 3, 1, 1);
@@ -151,6 +153,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: rgb(44, 100, 204);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_20, 1, 3, 1, 1);
@@ -167,6 +170,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn7, 1, 0, 1, 1);
@@ -183,6 +187,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: rgb(44, 100, 204);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_22, 3, 3, 1, 1);
@@ -199,6 +204,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn6, 2, 2, 1, 1);
@@ -215,6 +221,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn0, 4, 1, 1, 1);
@@ -231,6 +238,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: rgb(44, 100, 204);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_23, 4, 3, 1, 1);
@@ -247,6 +255,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn2, 3, 1, 1, 1);
@@ -263,6 +272,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn9, 1, 2, 1, 1);
@@ -279,6 +289,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn8, 1, 1, 1, 1);
@@ -295,6 +306,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: rgb(44, 100, 204);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_21, 2, 3, 1, 1);
@@ -311,6 +323,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn1, 3, 0, 1, 1);
@@ -328,6 +341,7 @@ public:
 "\n"
 "QPushButton::pressed{\n"
 "	background: rgb(86, 128, 212);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_8, 0, 0, 1, 1);
@@ -345,6 +359,7 @@ public:
 "\n"
 "QPushButton::pressed{\n"
 "	background: rgb(86, 128, 212);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_10, 0, 2, 1, 1);
@@ -361,6 +376,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn5, 2, 1, 1, 1);
@@ -378,6 +394,7 @@ public:
 "\n"
 "QPushButton::pressed{\n"
 "	background: rgb(86, 128, 212);\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_9, 0, 1, 1, 1);
@@ -394,6 +411,7 @@ public:
 "}\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn4, 2, 0, 1, 1);
@@ -411,6 +429,7 @@ public:
 "\n"
 "QPushButton::pressed{\n"
 "	background: #888;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(pushButton_19, 4, 2, 1, 1);
@@ -425,9 +444,9 @@ public:
 "	border: 1px;\n"
 "	background: #222;\n"
 "}\n"
-"\n"
 "QPushButton::pressed{\n"
 "	background: #666;\n"
+"    font-size: 28px;\n"
 "}"));
 
         gridLayout->addWidget(btn3, 3, 2, 1, 1);
