@@ -31,7 +31,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget{
-	background:black;
+	background:#B7D1FF;
 }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
@@ -76,7 +76,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QLabel{
-	color:white;
+	color: #032460;
 }
 </string>
         </property>
@@ -119,11 +119,11 @@
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #444;
+	background: #566A8D;
 }
 
 QPushButton::pressed{
-	background: #888;
+	background: #677B9E;
     font-size: 28px;
 }</string>
           </property>
@@ -149,10 +149,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background:rgb(55, 122, 255);
+	background: #4B8BFF;
 }
 QPushButton::pressed{
-	background: rgb(44, 100, 204);
+	background: #5C9CFF;
     font-size: 28px;
 }</string>
           </property>
@@ -178,10 +178,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background:rgb(55, 122, 255);
+	background: #4B8BFF;
 }
 QPushButton::pressed{
-	background: rgb(44, 100, 204);
+	background: #5C9CFF;
     font-size: 28px;
 }</string>
           </property>
@@ -207,10 +207,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -236,10 +236,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background:rgb(55, 122, 255);
+	background: #4B8BFF;
 }
 QPushButton::pressed{
-	background: rgb(44, 100, 204);
+	background: #5C9CFF;
     font-size: 28px;
 }</string>
           </property>
@@ -265,10 +265,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -294,10 +294,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -323,10 +323,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background:rgb(55, 122, 255);
+	background: #4B8BFF;
 }
 QPushButton::pressed{
-	background: rgb(44, 100, 204);
+	background: #5C9CFF;
     font-size: 28px;
 }</string>
           </property>
@@ -352,10 +352,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -381,10 +381,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -410,10 +410,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -439,10 +439,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background:rgb(55, 122, 255);
+	background: #4B8BFF;
 }
 QPushButton::pressed{
-	background: rgb(44, 100, 204);
+	background: #5C9CFF;
     font-size: 28px;
 }</string>
           </property>
@@ -468,10 +468,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -497,16 +497,16 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: rgb(63, 93, 154);
+	background: #566A8D;
 }
 
 QPushButton::pressed{
-	background: rgb(86, 128, 212);
+	background: #677B9E;
     font-size: 28px;
 }</string>
           </property>
           <property name="text">
-           <string>c</string>
+           <string>C</string>
           </property>
          </widget>
         </item>
@@ -527,11 +527,11 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: rgb(63, 93, 154);
+	background: #566A8D;
 }
 
 QPushButton::pressed{
-	background: rgb(86, 128, 212);
+	background: #677B9E;
     font-size: 28px;
 }</string>
           </property>
@@ -557,10 +557,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -586,11 +586,11 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: rgb(63, 93, 154);
+	background: #566A8D;
 }
 
 QPushButton::pressed{
-	background: rgb(86, 128, 212);
+	background: #677B9E;
     font-size: 28px;
 }</string>
           </property>
@@ -616,10 +616,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -645,11 +645,11 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #444;
+	background: #566A8D;
 }
 
 QPushButton::pressed{
-	background: #888;
+	background: #677B9E;
     font-size: 28px;
 }</string>
           </property>
@@ -675,10 +675,10 @@ QPushButton::pressed{
            <string notr="true">QPushButton{
 	color: white;
 	border: 1px;
-	background: #222;
+	background: #87B1FF;
 }
 QPushButton::pressed{
-	background: #666;
+	background: #98C2FF;
     font-size: 28px;
 }</string>
           </property>
@@ -699,7 +699,7 @@ QPushButton::pressed{
      <x>0</x>
      <y>0</y>
      <width>700</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
