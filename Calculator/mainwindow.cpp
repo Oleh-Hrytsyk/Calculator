@@ -27,6 +27,9 @@ MainWindow::~MainWindow()
 void MainWindow::print_numbers()
 {
     QPushButton *button = (QPushButton *)sender();
-
-    ui->result_label->setText(button->text());
+    double numbers;
+    QString new_label;
+    numbers = (ui->result_label->text() + button->text()).toDouble();
+    new_label = QString::number(numbers, 'g', 15);
+    ui->result_label->setText(new_label);
 }
