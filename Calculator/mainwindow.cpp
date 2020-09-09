@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn8, SIGNAL(clicked()), this, SLOT(print_numbers()));
     connect(ui->btn9, SIGNAL(clicked()), this, SLOT(print_numbers()));
     connect(ui->btn_dot, SIGNAL(clicked()), this, SLOT(print_dot()));
+    connect(ui->btn_sign, SIGNAL(clicked()), this, SLOT(change_sign()));
 }
 
 MainWindow::~MainWindow()
@@ -43,4 +44,15 @@ void MainWindow::print_dot(){
     if(!(ui->result_label->text().contains('.'))){
     ui->result_label->setText(ui->result_label->text()+'.');
     }
+}
+
+void MainWindow::change_sign()
+{
+    double numbers;
+    QString new_label;
+
+    numbers = ui->result_label->text().toDouble();
+    new_label = QString::number(-numbers, 'g', 15);
+    ui->result_label->setText(new_label);
+
 }

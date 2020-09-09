@@ -48,7 +48,7 @@ public:
     QPushButton *btn5;
     QPushButton *btn7;
     QPushButton *btn_dot;
-    QPushButton *pushButton_16;
+    QPushButton *btn_sign;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -451,12 +451,12 @@ public:
 
         gridLayout->addWidget(btn_dot, 4, 2, 1, 1);
 
-        pushButton_16 = new QPushButton(centralwidget);
-        pushButton_16->setObjectName(QString::fromUtf8("pushButton_16"));
-        sizePolicy2.setHeightForWidth(pushButton_16->sizePolicy().hasHeightForWidth());
-        pushButton_16->setSizePolicy(sizePolicy2);
-        pushButton_16->setFont(font);
-        pushButton_16->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        btn_sign = new QPushButton(centralwidget);
+        btn_sign->setObjectName(QString::fromUtf8("btn_sign"));
+        sizePolicy2.setHeightForWidth(btn_sign->sizePolicy().hasHeightForWidth());
+        btn_sign->setSizePolicy(sizePolicy2);
+        btn_sign->setFont(font);
+        btn_sign->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
 "	background: #566A8D;\n"
@@ -468,7 +468,7 @@ public:
 "    font-size: 28px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_16, 4, 0, 1, 1);
+        gridLayout->addWidget(btn_sign, 4, 0, 1, 1);
 
 
         verticalLayout_2->addLayout(gridLayout);
@@ -510,7 +510,7 @@ public:
         btn5->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
         btn7->setText(QCoreApplication::translate("MainWindow", "7", nullptr));
         btn_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
-        pushButton_16->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        btn_sign->setText(QCoreApplication::translate("MainWindow", "+/-", nullptr));
     } // retranslateUi
 
 };
