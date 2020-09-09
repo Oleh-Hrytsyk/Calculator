@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn7, SIGNAL(clicked()), this, SLOT(print_numbers()));
     connect(ui->btn8, SIGNAL(clicked()), this, SLOT(print_numbers()));
     connect(ui->btn9, SIGNAL(clicked()), this, SLOT(print_numbers()));
+    connect(ui->btn_dot, SIGNAL(clicked()), this, SLOT(print_dot()));
 }
 
 MainWindow::~MainWindow()
@@ -29,7 +30,17 @@ void MainWindow::print_numbers()
     QPushButton *button = (QPushButton *)sender();
     double numbers;
     QString new_label;
+    if(button->text() == '0'){
+        ui->result_label->setText(ui->result_label->text()+'0');
+        return;
+    }
     numbers = (ui->result_label->text() + button->text()).toDouble();
     new_label = QString::number(numbers, 'g', 15);
     ui->result_label->setText(new_label);
+}
+
+void MainWindow::print_dot(){
+    if(!(ui->result_label->text().contains('.'))){
+    ui->result_label->setText(ui->result_label->text()+'.');
+    }
 }

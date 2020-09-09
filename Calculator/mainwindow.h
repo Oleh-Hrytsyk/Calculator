@@ -20,5 +20,6 @@ private:
 
 private slots:
     void print_numbers();
+    void print_dot();
 };
 #endif // MAINWINDOW_H
