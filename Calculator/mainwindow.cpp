@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn9, SIGNAL(clicked()), this, SLOT(print_numbers()));
     connect(ui->btn_dot, SIGNAL(clicked()), this, SLOT(print_dot()));
     connect(ui->btn_sign, SIGNAL(clicked()), this, SLOT(change_sign()));
+    connect(ui->btn_procent, SIGNAL(clicked()), this, SLOT(make_procent()));
 }
 
 MainWindow::~MainWindow()
@@ -53,6 +54,16 @@ void MainWindow::change_sign()
 
     numbers = ui->result_label->text().toDouble();
     new_label = QString::number(-numbers, 'g', 15);
+    ui->result_label->setText(new_label);
+
+}
+
+void MainWindow::make_procent(){
+    double numbers;
+    QString new_label;
+
+    numbers = ui->result_label->text().toDouble()*0.01;
+    new_label = QString::number(numbers, 'g', 15);
     ui->result_label->setText(new_label);
 
 }

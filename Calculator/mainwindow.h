@@ -22,5 +22,6 @@ private slots:
     void print_numbers();
     void print_dot();
     void change_sign();
+    void make_procent();
 };
 #endif // MAINWINDOW_H
