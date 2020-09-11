@@ -20,6 +20,17 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn_dot, SIGNAL(clicked()), this, SLOT(print_dot()));
     connect(ui->btn_sign, SIGNAL(clicked()), this, SLOT(change_sign()));
     connect(ui->btn_procent, SIGNAL(clicked()), this, SLOT(make_procent()));
+    connect(ui->btn_minus, SIGNAL(clicked()), this, SLOT(math_operations()));
+    connect(ui->btn_plus, SIGNAL(clicked()), this, SLOT(math_operations()));
+    connect(ui->btn_divide, SIGNAL(clicked()), this, SLOT(math_operations()));
+    connect(ui->btn_multiply, SIGNAL(clicked()), this, SLOT(math_operations()));
+    connect(ui->btn, SIGNAL(clicked()), this, SLOT(make_operation()));
+
+
+    ui->btn_divide->setCheckable(true);
+    ui->btn_multiply->setCheckable(true);
+    ui->btn_minus->setCheckable(true);
+    ui->btn_plus->setCheckable(true);
 }
 
 MainWindow::~MainWindow()
@@ -66,4 +77,57 @@ void MainWindow::make_procent(){
     new_label = QString::number(numbers, 'g', 15);
     ui->result_label->setText(new_label);
 
+}
+
+void MainWindow::math_operations(){
+
+    ui->btn_divide->setChecked(false);
+    ui->btn_multiply->setChecked(false);
+    ui->btn_minus->setChecked(false);
+    ui->btn_plus->setChecked(false);
+
+    QPushButton *button = (QPushButton *)sender();
+
+    button->setChecked(true);
+
+    ui->operation_label->setText(ui->result_label->text()+button->text());
+
+    first_number = ui->result_label->text().toDouble();
+
+    ui->result_label->setText("");
+}
+
+void MainWindow::make_operation(){
+    double numbers;
+    QString new_label;
+
+    numbers = ui->result_label->text().toDouble();
+
+
+    if(ui->btn_divide->isChecked()){
+        if(numbers == 0){
+            ui->result_label->setText("");
+        }
+        else{
+            numbers = first_number/numbers;
+            new_label = QString::number(numbers, 'g', 15);
+            ui->result_label->setText(new_label);
+        }
+    }
+    else if(ui->btn_multiply->isChecked()){
+        numbers = first_number*numbers;
+        new_label = QString::number(numbers, 'g', 15);
+        ui->result_label->setText(new_label);
+    }
+    else if(ui->btn_plus->isChecked()){
+        numbers = first_number+numbers;
+        new_label = QString::number(numbers, 'g', 15);
+        ui->result_label->setText(new_label);
+    }
+    else if(ui->btn_minus->isChecked()){
+        numbers = first_number-numbers;
+        new_label = QString::number(numbers, 'g', 15);
+        ui->result_label->setText(new_label);
+    }
+     ui->operation_label->setText("");
 }

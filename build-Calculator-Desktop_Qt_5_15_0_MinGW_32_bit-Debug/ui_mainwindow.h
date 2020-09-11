@@ -27,6 +27,7 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout_2;
+    QLabel *operation_label;
     QLabel *result_label;
     QGridLayout *gridLayout;
     QPushButton *btn9;
@@ -73,10 +74,25 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(1);
+        verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        operation_label = new QLabel(centralwidget);
+        operation_label->setObjectName(QString::fromUtf8("operation_label"));
+        QFont font;
+        font.setPointSize(14);
+        operation_label->setFont(font);
+        operation_label->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	color: #032460;\n"
+"}\n"
+"\n"
+""));
+        operation_label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        operation_label->setMargin(20);
+
+        verticalLayout_2->addWidget(operation_label);
+
         result_label = new QLabel(centralwidget);
         result_label->setObjectName(QString::fromUtf8("result_label"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Maximum);
@@ -85,9 +101,9 @@ public:
         sizePolicy1.setHeightForWidth(result_label->sizePolicy().hasHeightForWidth());
         result_label->setSizePolicy(sizePolicy1);
         result_label->setMinimumSize(QSize(0, 150));
-        QFont font;
-        font.setPointSize(24);
-        result_label->setFont(font);
+        QFont font1;
+        font1.setPointSize(24);
+        result_label->setFont(font1);
         result_label->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color: #032460;\n"
 "}\n"
@@ -106,7 +122,7 @@ public:
         btn9->setObjectName(QString::fromUtf8("btn9"));
         sizePolicy.setHeightForWidth(btn9->sizePolicy().hasHeightForWidth());
         btn9->setSizePolicy(sizePolicy);
-        btn9->setFont(font);
+        btn9->setFont(font1);
         btn9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -124,7 +140,7 @@ public:
         btn_clear->setObjectName(QString::fromUtf8("btn_clear"));
         sizePolicy.setHeightForWidth(btn_clear->sizePolicy().hasHeightForWidth());
         btn_clear->setSizePolicy(sizePolicy);
-        btn_clear->setFont(font);
+        btn_clear->setFont(font1);
         btn_clear->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -143,7 +159,7 @@ public:
         btn6->setObjectName(QString::fromUtf8("btn6"));
         sizePolicy.setHeightForWidth(btn6->sizePolicy().hasHeightForWidth());
         btn6->setSizePolicy(sizePolicy);
-        btn6->setFont(font);
+        btn6->setFont(font1);
         btn6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -161,7 +177,7 @@ public:
         btn3->setObjectName(QString::fromUtf8("btn3"));
         sizePolicy.setHeightForWidth(btn3->sizePolicy().hasHeightForWidth());
         btn3->setSizePolicy(sizePolicy);
-        btn3->setFont(font);
+        btn3->setFont(font1);
         btn3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -179,7 +195,7 @@ public:
         btn_multiply->setObjectName(QString::fromUtf8("btn_multiply"));
         sizePolicy.setHeightForWidth(btn_multiply->sizePolicy().hasHeightForWidth());
         btn_multiply->setSizePolicy(sizePolicy);
-        btn_multiply->setFont(font);
+        btn_multiply->setFont(font1);
         btn_multiply->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -200,7 +216,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(btn4->sizePolicy().hasHeightForWidth());
         btn4->setSizePolicy(sizePolicy2);
-        btn4->setFont(font);
+        btn4->setFont(font1);
         btn4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -218,7 +234,7 @@ public:
         btn_procent->setObjectName(QString::fromUtf8("btn_procent"));
         sizePolicy.setHeightForWidth(btn_procent->sizePolicy().hasHeightForWidth());
         btn_procent->setSizePolicy(sizePolicy);
-        btn_procent->setFont(font);
+        btn_procent->setFont(font1);
         btn_procent->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -237,7 +253,7 @@ public:
         btn->setObjectName(QString::fromUtf8("btn"));
         sizePolicy.setHeightForWidth(btn->sizePolicy().hasHeightForWidth());
         btn->setSizePolicy(sizePolicy);
-        btn->setFont(font);
+        btn->setFont(font1);
         btn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -255,7 +271,7 @@ public:
         btn0->setObjectName(QString::fromUtf8("btn0"));
         sizePolicy.setHeightForWidth(btn0->sizePolicy().hasHeightForWidth());
         btn0->setSizePolicy(sizePolicy);
-        btn0->setFont(font);
+        btn0->setFont(font1);
         btn0->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -273,7 +289,7 @@ public:
         btn_minus->setObjectName(QString::fromUtf8("btn_minus"));
         sizePolicy.setHeightForWidth(btn_minus->sizePolicy().hasHeightForWidth());
         btn_minus->setSizePolicy(sizePolicy);
-        btn_minus->setFont(font);
+        btn_minus->setFont(font1);
         btn_minus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -291,7 +307,7 @@ public:
         btn1->setObjectName(QString::fromUtf8("btn1"));
         sizePolicy2.setHeightForWidth(btn1->sizePolicy().hasHeightForWidth());
         btn1->setSizePolicy(sizePolicy2);
-        btn1->setFont(font);
+        btn1->setFont(font1);
         btn1->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -309,7 +325,7 @@ public:
         btn2->setObjectName(QString::fromUtf8("btn2"));
         sizePolicy.setHeightForWidth(btn2->sizePolicy().hasHeightForWidth());
         btn2->setSizePolicy(sizePolicy);
-        btn2->setFont(font);
+        btn2->setFont(font1);
         btn2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -327,7 +343,7 @@ public:
         btn_divide->setObjectName(QString::fromUtf8("btn_divide"));
         sizePolicy.setHeightForWidth(btn_divide->sizePolicy().hasHeightForWidth());
         btn_divide->setSizePolicy(sizePolicy);
-        btn_divide->setFont(font);
+        btn_divide->setFont(font1);
         btn_divide->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -345,7 +361,7 @@ public:
         btn8->setObjectName(QString::fromUtf8("btn8"));
         sizePolicy.setHeightForWidth(btn8->sizePolicy().hasHeightForWidth());
         btn8->setSizePolicy(sizePolicy);
-        btn8->setFont(font);
+        btn8->setFont(font1);
         btn8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -363,7 +379,7 @@ public:
         btn_plus->setObjectName(QString::fromUtf8("btn_plus"));
         sizePolicy.setHeightForWidth(btn_plus->sizePolicy().hasHeightForWidth());
         btn_plus->setSizePolicy(sizePolicy);
-        btn_plus->setFont(font);
+        btn_plus->setFont(font1);
         btn_plus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -381,7 +397,7 @@ public:
         btn_del->setObjectName(QString::fromUtf8("btn_del"));
         sizePolicy.setHeightForWidth(btn_del->sizePolicy().hasHeightForWidth());
         btn_del->setSizePolicy(sizePolicy);
-        btn_del->setFont(font);
+        btn_del->setFont(font1);
         btn_del->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -400,7 +416,7 @@ public:
         btn5->setObjectName(QString::fromUtf8("btn5"));
         sizePolicy.setHeightForWidth(btn5->sizePolicy().hasHeightForWidth());
         btn5->setSizePolicy(sizePolicy);
-        btn5->setFont(font);
+        btn5->setFont(font1);
         btn5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -418,7 +434,7 @@ public:
         btn7->setObjectName(QString::fromUtf8("btn7"));
         sizePolicy.setHeightForWidth(btn7->sizePolicy().hasHeightForWidth());
         btn7->setSizePolicy(sizePolicy);
-        btn7->setFont(font);
+        btn7->setFont(font1);
         btn7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -436,7 +452,7 @@ public:
         btn_dot->setObjectName(QString::fromUtf8("btn_dot"));
         sizePolicy.setHeightForWidth(btn_dot->sizePolicy().hasHeightForWidth());
         btn_dot->setSizePolicy(sizePolicy);
-        btn_dot->setFont(font);
+        btn_dot->setFont(font1);
         btn_dot->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -455,7 +471,7 @@ public:
         btn_sign->setObjectName(QString::fromUtf8("btn_sign"));
         sizePolicy2.setHeightForWidth(btn_sign->sizePolicy().hasHeightForWidth());
         btn_sign->setSizePolicy(sizePolicy2);
-        btn_sign->setFont(font);
+        btn_sign->setFont(font1);
         btn_sign->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: white;\n"
 "	border: 1px;\n"
@@ -473,6 +489,9 @@ public:
 
         verticalLayout_2->addLayout(gridLayout);
 
+        verticalLayout_2->setStretch(0, 1);
+        verticalLayout_2->setStretch(1, 5);
+        verticalLayout_2->setStretch(2, 10);
 
         gridLayout_2->addLayout(verticalLayout_2, 0, 0, 1, 1);
 
@@ -490,6 +509,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        operation_label->setText(QString());
         result_label->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         btn9->setText(QCoreApplication::translate("MainWindow", "9", nullptr));
         btn_clear->setText(QCoreApplication::translate("MainWindow", "C", nullptr));

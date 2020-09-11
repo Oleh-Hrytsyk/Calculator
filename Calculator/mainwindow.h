@@ -17,11 +17,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    double first_number;
 
 private slots:
     void print_numbers();
     void print_dot();
     void change_sign();
     void make_procent();
+    void math_operations();
+    void make_operation();
 };
 #endif // MAINWINDOW_H
