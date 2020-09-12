@@ -140,5 +140,21 @@ void MainWindow::clear_label(){
 }
 
 void MainWindow::del(){
+    QString new_label;
 
+    if(ui->result_label->text() == ""){
+        ui->btn_divide->setChecked(false);
+        ui->btn_multiply->setChecked(false);
+        ui->btn_minus->setChecked(false);
+        ui->btn_plus->setChecked(false);
+        new_label=ui->operation_label->text();
+        ui->operation_label->setText("");
+        new_label = new_label.remove(new_label.size()-1,1);
+        ui->result_label->setText(new_label);
+    }
+    else{
+        new_label=ui->result_label->text();
+        new_label = new_label.remove(new_label.size()-1,1);
+        ui->result_label->setText(new_label);
+    }
 }
