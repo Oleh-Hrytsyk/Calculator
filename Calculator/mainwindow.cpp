@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn_divide, SIGNAL(clicked()), this, SLOT(math_operations()));
     connect(ui->btn_multiply, SIGNAL(clicked()), this, SLOT(math_operations()));
     connect(ui->btn, SIGNAL(clicked()), this, SLOT(make_operation()));
+    connect(ui->btn_clear, SIGNAL(clicked()), this, SLOT(clear_label()));
+    connect(ui->btn_del, SIGNAL(clicked()), this, SLOT(del()));
 
 
     ui->btn_divide->setCheckable(true);
@@ -130,4 +132,13 @@ void MainWindow::make_operation(){
         ui->result_label->setText(new_label);
     }
      ui->operation_label->setText("");
+}
+
+void MainWindow::clear_label(){
+    ui->result_label->setText("");
+    ui->operation_label->setText("");
+}
+
+void MainWindow::del(){
+
 }

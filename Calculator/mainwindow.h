@@ -26,5 +26,7 @@ private slots:
     void make_procent();
     void math_operations();
     void make_operation();
+    void del();
+    void clear_label();
 };
 #endif // MAINWINDOW_H
