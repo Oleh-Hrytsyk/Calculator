@@ -159,6 +159,16 @@ void MainWindow::del(){
     }
 }
 
-void MainWindow::keyPressEvent(QKeyEvent * e){
-
+void MainWindow::keyPressEvent(QKeyEvent *e){
+    if(e->key() >= Qt::Key_0 && e->key() <= Qt::Key_9){
+        double numbers;
+        QString new_label;
+        if(e->text() == '0'){
+            ui->result_label->setText(ui->result_label->text()+'0');
+            return;
+        }
+        numbers = (ui->result_label->text() + e->text()).toDouble();
+        new_label = QString::number(numbers, 'g', 15);
+        ui->result_label->setText(new_label);
+    }
 }
