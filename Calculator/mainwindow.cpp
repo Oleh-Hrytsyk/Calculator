@@ -158,3 +158,7 @@ void MainWindow::del(){
         ui->result_label->setText(new_label);
     }
 }
+
+void MainWindow::keyPressEvent(QKeyEvent * e){
+
+}

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTextStream>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,5 +29,8 @@ private slots:
     void make_operation();
     void del();
     void clear_label();
+
+protected:
+    void keyPressEvent(QKeyEvent * e);
 };
 #endif // MAINWINDOW_H
