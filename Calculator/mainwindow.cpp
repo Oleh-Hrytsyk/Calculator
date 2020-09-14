@@ -171,7 +171,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
         new_label = QString::number(numbers, 'g', 15);
         ui->result_label->setText(new_label);
     }
-    else if(e->key() >= Qt::Key_Backspace){
+    else if(e->key() == Qt::Key_Backspace){
         QString new_label;
 
         if(ui->result_label->text() == ""){
@@ -189,5 +189,13 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
             new_label = new_label.remove(new_label.size()-1,1);
             ui->result_label->setText(new_label);
         }
+    }
+    else if(e->key() == Qt::Key_Percent){
+        double numbers;
+        QString new_label;
+
+        numbers = ui->result_label->text().toDouble()*0.01;
+        new_label = QString::number(numbers, 'g', 15);
+        ui->result_label->setText(new_label);
     }
 }
