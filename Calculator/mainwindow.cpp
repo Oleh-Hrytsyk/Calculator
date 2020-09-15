@@ -172,6 +172,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
         ui->result_label->setText(new_label);
     }
     else if(e->key() == Qt::Key_Backspace){
+
         QString new_label;
 
         if(ui->result_label->text() == ""){
@@ -189,6 +190,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
             new_label = new_label.remove(new_label.size()-1,1);
             ui->result_label->setText(new_label);
         }
+
     }
     else if(e->key() == Qt::Key_Percent){
         double numbers;
@@ -197,5 +199,39 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
         numbers = ui->result_label->text().toDouble()*0.01;
         new_label = QString::number(numbers, 'g', 15);
         ui->result_label->setText(new_label);
+    }
+    else if(e->key() == Qt::Key_Equal || e->key() == Qt::Key_Enter){
+        double numbers;
+        QString new_label;
+
+        numbers = ui->result_label->text().toDouble();
+
+
+        if(ui->btn_divide->isChecked()){
+            if(numbers == 0){
+                ui->result_label->setText("");
+            }
+            else{
+                numbers = first_number/numbers;
+                new_label = QString::number(numbers, 'g', 15);
+                ui->result_label->setText(new_label);
+            }
+        }
+        else if(ui->btn_multiply->isChecked()){
+            numbers = first_number*numbers;
+            new_label = QString::number(numbers, 'g', 15);
+            ui->result_label->setText(new_label);
+        }
+        else if(ui->btn_plus->isChecked()){
+            numbers = first_number+numbers;
+            new_label = QString::number(numbers, 'g', 15);
+            ui->result_label->setText(new_label);
+        }
+        else if(ui->btn_minus->isChecked()){
+            numbers = first_number-numbers;
+            new_label = QString::number(numbers, 'g', 15);
+            ui->result_label->setText(new_label);
+        }
+         ui->operation_label->setText("");
     }
 }
