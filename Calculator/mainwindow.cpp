@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,6 +34,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->btn_multiply->setCheckable(true);
     ui->btn_minus->setCheckable(true);
     ui->btn_plus->setCheckable(true);
+    ui->btn_divide->setChecked(false);
+    ui->btn_multiply->setChecked(false);
+    ui->btn_minus->setChecked(false);
+    ui->btn_plus->setChecked(false);
 }
 
 MainWindow::~MainWindow()
@@ -83,20 +88,37 @@ void MainWindow::make_procent(){
 
 void MainWindow::math_operations(){
 
-    ui->btn_divide->setChecked(false);
-    ui->btn_multiply->setChecked(false);
-    ui->btn_minus->setChecked(false);
-    ui->btn_plus->setChecked(false);
 
-    QPushButton *button = (QPushButton *)sender();
+    if(ui->operation_label->text() == ""){
+        QPushButton *button = (QPushButton *)sender();
 
-    button->setChecked(true);
+        std::cout<<button->text().toStdString()<<std::endl;
+        button->setChecked(true);
 
-    ui->operation_label->setText(ui->result_label->text()+button->text());
+        ui->operation_label->setText(ui->result_label->text()+button->text());
 
-    first_number = ui->result_label->text().toDouble();
+        first_number = ui->result_label->text().toDouble();
 
-    ui->result_label->setText("");
+        ui->result_label->setText("");
+    }
+    else{
+        ui->btn_divide->setChecked(false);
+        ui->btn_multiply->setChecked(false);
+        ui->btn_minus->setChecked(false);
+        ui->btn_plus->setChecked(false);
+        QPushButton *button = (QPushButton *)sender();
+        button->setChecked(true);
+
+        QString operation_label;
+
+        operation_label = ui->operation_label->text();
+        operation_label.remove(operation_label.size()-1, 1);
+        operation_label.append(button->text());
+        ui->operation_label->setText(operation_label);
+    }
+
+
+
 }
 
 void MainWindow::make_operation(){
@@ -185,60 +207,109 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
         clear_label();
     }
     else if(e->key() == Qt::Key_Plus){
-        ui->btn_divide->setChecked(false);
-        ui->btn_multiply->setChecked(false);
-        ui->btn_minus->setChecked(false);
-        ui->btn_plus->setChecked(false);
+        if(ui->operation_label->text() == ""){
 
-        ui->btn_plus->setChecked(true);
 
-        ui->operation_label->setText(ui->result_label->text()+ui->btn_plus->text());
+            ui->btn_plus->setChecked(true);
 
-        first_number = ui->result_label->text().toDouble();
+            ui->operation_label->setText(ui->result_label->text()+ui->btn_plus->text());
 
-        ui->result_label->setText("");
+            first_number = ui->result_label->text().toDouble();
+
+            ui->result_label->setText("");
+        }
+        else{
+            ui->btn_divide->setChecked(false);
+            ui->btn_multiply->setChecked(false);
+            ui->btn_minus->setChecked(false);
+
+            ui->btn_plus->setChecked(true);
+
+            QString operation_label;
+
+            operation_label = ui->operation_label->text();
+            operation_label.remove(operation_label.size()-1, 1);
+            operation_label.append(ui->btn_plus->text());
+            ui->operation_label->setText(operation_label);
+        }
     }
     else if(e->key() == Qt::Key_Minus){
-        ui->btn_divide->setChecked(false);
-        ui->btn_multiply->setChecked(false);
-        ui->btn_minus->setChecked(false);
-        ui->btn_plus->setChecked(false);
+        if(ui->operation_label->text() == ""){
 
-        ui->btn_minus->setChecked(true);
 
-        ui->operation_label->setText(ui->result_label->text()+ui->btn_minus->text());
+            ui->btn_minus->setChecked(true);
 
-        first_number = ui->result_label->text().toDouble();
+            ui->operation_label->setText(ui->result_label->text()+ui->btn_minus->text());
 
-        ui->result_label->setText("");
+            first_number = ui->result_label->text().toDouble();
+
+            ui->result_label->setText("");
+        }
+        else{
+            ui->btn_divide->setChecked(false);
+            ui->btn_multiply->setChecked(false);
+            ui->btn_minus->setChecked(true);
+            ui->btn_plus->setChecked(false);
+
+            QString operation_label;
+
+            operation_label = ui->operation_label->text();
+            operation_label.remove(operation_label.size()-1, 1);
+            operation_label.append(ui->btn_minus->text());
+            ui->operation_label->setText(operation_label);
+        }
     }
-    else if(e->key() == Qt::Key_multiply){
-        ui->btn_divide->setChecked(false);
-        ui->btn_multiply->setChecked(false);
-        ui->btn_minus->setChecked(false);
-        ui->btn_plus->setChecked(false);
+    else if(e->key() == Qt::Key_Asterisk){
+        if(ui->operation_label->text() == ""){
 
-        ui->btn_multiply->setChecked(true);
 
-        ui->operation_label->setText(ui->result_label->text()+ui->btn_multiply->text());
+            ui->btn_multiply->setChecked(true);
 
-        first_number = ui->result_label->text().toDouble();
+            ui->operation_label->setText(ui->result_label->text()+ui->btn_multiply->text());
 
-        ui->result_label->setText("");
+            first_number = ui->result_label->text().toDouble();
+
+            ui->result_label->setText("");
+        }
+        else{
+            ui->btn_divide->setChecked(false);
+            ui->btn_multiply->setChecked(true);
+            ui->btn_minus->setChecked(false);
+            ui->btn_plus->setChecked(false);
+
+            QString operation_label;
+
+            operation_label = ui->operation_label->text();
+            operation_label.remove(operation_label.size()-1, 1);
+            operation_label.append(ui->btn_multiply->text());
+            ui->operation_label->setText(operation_label);
+        }
     }
     else if(e->key() == Qt::Key_Slash){
-        ui->btn_divide->setChecked(false);
-        ui->btn_multiply->setChecked(false);
-        ui->btn_minus->setChecked(false);
-        ui->btn_plus->setChecked(false);
+        if(ui->operation_label->text() == ""){
 
-        ui->btn_divide->setChecked(true);
 
-        ui->operation_label->setText(ui->result_label->text()+ui->btn_divide->text());
+            ui->btn_divide->setChecked(true);
 
-        first_number = ui->result_label->text().toDouble();
+            ui->operation_label->setText(ui->result_label->text()+ui->btn_divide->text());
 
-        ui->result_label->setText("");
+            first_number = ui->result_label->text().toDouble();
+
+            ui->result_label->setText("");
+        }
+        else{
+            ui->btn_divide->setChecked(true);
+            ui->btn_multiply->setChecked(false);
+            ui->btn_minus->setChecked(false);
+            ui->btn_plus->setChecked(false);
+
+            QString operation_label;
+
+            operation_label = ui->operation_label->text();
+            operation_label.remove(operation_label.size()-1, 1);
+            operation_label.append(ui->btn_divide->text());
+            ui->operation_label->setText(operation_label);
+        }
     }
     else if(e->key() == Qt::Key_Comma){
         print_dot();
